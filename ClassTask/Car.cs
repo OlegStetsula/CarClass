@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Collections.Generic;
 
 namespace ClassTask
 {
@@ -9,6 +10,7 @@ namespace ClassTask
         string model;
         string color;
         decimal price;
+        static List<Car> cars = new List<Car>();
         public string Color
         {
             get { return color; }
@@ -19,6 +21,7 @@ namespace ClassTask
             model = "Unknown";
             color = "Unknown";
             price = 0;
+            cars.Add(this);
         }
         public Car(string l, string c, decimal p)
         {
@@ -44,5 +47,6 @@ namespace ClassTask
             decimal percent = (this.price * (decimal)x) / 100;
             this.price += percent;
         }
+
     }
 }
