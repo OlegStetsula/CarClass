@@ -47,6 +47,11 @@ namespace ClassTask
             decimal percent = (this.price * (decimal)x) / 100;
             this.price += percent;
         }
+        public Car this[int index]
+        {
+            get { return cars[index]; }
+            set { cars[index] = value; }
+        }
 
     }
 }
