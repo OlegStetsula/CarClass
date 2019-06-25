@@ -52,6 +52,9 @@ namespace ClassTask
             get { return cars[index]; }
             set { cars[index] = value; }
         }
-
+        public static decimal operator +(Car a, Car b)
+        {
+           return a.price + b.price;
+        }
     }
 }
